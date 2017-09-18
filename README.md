@@ -29,12 +29,15 @@ validateSct [log key] [timestamp] [signature]
 log key and signature expected in base64.
 
 Example run:
+
+```
 $ ./validateSct MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEfahLEimAoz2t01p3uMziiLOl/fHTDM0YDOhBRuiBARsV4UvxG2LdNgoIGLrtCzWE0J5APC2em4JlvR8EEEFMoA== 1406997753366 MEQCIBxLgl2Vbmdb2wSVS/bO9DI+hnp6MqsYYHTeCNoFkUwvAiBzVBtuf6GwfRG85vOFL5dmGveK5BAljxL0bzkP0p4Y8A==
 Log key: MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEfahLEimAoz2t01p3uMziiLOl/fHTDM0YDOhBRuiBARsV4UvxG2LdNgoIGLrtCzWE0J5APC2em4JlvR8EEEFMoA==
 Timestamp: 1406997753366
 Signature: MEQCIBxLgl2Vbmdb2wSVS/bO9DI+hnp6MqsYYHTeCNoFkUwvAiBzVBtuf6GwfRG85vOFL5dmGveK5BAljxL0bzkP0p4Y8A==
 Valid SCT test	2	53fd396c744d64677d3bc4eb06eafdd78f442	4c3fbfbac7589ee68d753f806acc822cbd5082c735fdc3fce3924dc32959288f
 Done
+```
 
 In this case, the certificate in line 2 with the sha1
 53fd396c744d64677d3bc4eb06eafdd78f442 and the sha256
@@ -51,6 +54,7 @@ Certificates are expected in a file named "certificates", base64-encoded, one pe
 
 SCT information is sent to stdout with the following fields on each line (tab separated):
 
+```
 sha1 of certificate
 sha256 of certificate
 SCT version
@@ -59,6 +63,7 @@ SCT timestamp
 SCT hash algorithm (numeric)
 SCT signature algorithm (numeric)
 SCT signature (base64 encoded)
+```
 
 errors are sent to stderr.
 
