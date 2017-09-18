@@ -1,0 +1,5 @@
+Header-only C++11 library for base64 encode/decode.
+
+https://github.com/tplgy/cppcodec
+
+Please note that cppcodec comes with a separate license.
